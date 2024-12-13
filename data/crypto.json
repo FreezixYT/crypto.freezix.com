@@ -1,0 +1,10 @@
+{
+    "BTC": {
+        "name": "Bitcoin",
+        "image": "img/btc.png"
+    },
+    "ETH": {
+        "name": "Ethereum",
+        "image": "img/eth.png"
+    }
+}
