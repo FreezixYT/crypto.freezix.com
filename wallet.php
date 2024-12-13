@@ -10,10 +10,25 @@ $user = $_SESSION['user'];
 $walletFile = './data/wallet.json';
 $cryptoFile = './data/crypto.json';
 
-$wallets = file_exists($walletFile) ? json_decode(file_get_contents($walletFile), true) : [];
-$cryptoData = file_exists($cryptoFile) ? json_decode(file_get_contents($cryptoFile), true) : [];
+if (file_exists($walletFile)) {
+    $wallets = json_decode(file_get_contents($walletFile), true);
+} else {
+    echo "Erreur, fichier non trouvé";
+}
 
-$userWallet = isset($wallets[$user]) ? $wallets[$user] : [];
+if (file_exists($cryptoFile)) {
+    $cryptoData = json_decode(file_get_contents($cryptoFile), true);
+} else {
+    echo "Erreur, fichier non trouvé";
+}
+
+if (!($wallets[$user])) 
+{
+    $userWallet = $wallets[$user];
+} else {
+    echo "Erreur, le portefeuille de l'utilisateur n'existe pas.";
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -35,19 +50,21 @@ $userWallet = isset($wallets[$user]) ? $wallets[$user] : [];
         <h1>Mes Cryptomonnaies</h1>
 
         <div class="zone-crypto">
-            <?php if (!empty($userWallet)) : ?>
-                <?php foreach ($userWallet as $cryptoID => $amount) : ?>
-                    <?php if (isset($cryptoData[$cryptoID])): ?>
-                        <div class="crypto-item">
-                            <img src="<?= $cryptoData[$cryptoID]['image'] ?>" alt="<?= $cryptoData[$cryptoID]['name'] ?>">
-                            <p><strong><?= $cryptoData[$cryptoID]['name'] ?></strong></p>
-                            <p>Quantité : <?= $amount ?></p>
-                        </div>
-                    <?php endif; ?>
-                <?php endforeach; ?>
-            <?php else : ?>
-                <p>Vous n'avez aucune crypto pour le moment.</p>
-            <?php endif; ?>
+            <?php
+            if (!empty($userWallet)) {
+                foreach ($userWallet as $cryptoID => $amount) {
+                    if (isset($cryptoData[$cryptoID])) {
+                        echo '<div class="crypto-item">';
+                        echo '<img src="' . $cryptoData[$cryptoID]['image'] . '" alt="' . $cryptoData[$cryptoID]['name'] . '">';
+                        echo '<p><strong>' . $cryptoData[$cryptoID]['name'] . '</strong></p>';
+                        echo '<p>Quantité : ' . $amount . '</p>';
+                        echo '</div>';
+                    }
+                }
+            } else {
+                echo '<p>Vous n\'avez aucune crypto pour le moment.</p>';
+            }
+            ?>
         </div>
 
         <p>Freezix.com - Regardez, achetez et vendez vos cryptos au meilleur prix.</p>
