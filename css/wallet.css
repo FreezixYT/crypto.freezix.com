@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #121212;
+    background-color: #3f3f3f;
     color: white;
 }
 
@@ -10,7 +10,8 @@ header {
     text-align: center;
 }
 
-main {
+main 
+{
     padding: 20px;
 }
 
@@ -20,20 +21,24 @@ h1 {
     font-weight: bold;
 }
 
-.zone-crypto {
+.zone-crypto 
+{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-.crypto-item {
-    width: 200px;
+.crypto-item 
+{
+    width: 1000px;
     padding: 15px;
     margin: 10px;
     background-color: #1e1e1e;
     text-align: center;
     border-radius: 10px;
     transition: transform 0.3s;
+    display: flex;
+    justify-content: space-around;
 }
 
 .crypto-item:hover {

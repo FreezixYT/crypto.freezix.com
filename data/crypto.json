@@ -1,10 +1,26 @@
 {
     "BTC": {
         "name": "Bitcoin",
-        "image": "img/btc.png"
+        "image": "img/crypto/bitcoin.png"
     },
     "ETH": {
         "name": "Ethereum",
-        "image": "img/eth.png"
+        "image": "img/crypto/ethereum.png"
+    },
+    "DOG": {
+        "name": "Dogecoin",
+        "image": "img/crypto/dogecoin.png"
+    },
+    "FRZ": {
+        "name": "Freezixcoin",
+        "image": "img/crypto/freezixcoin.png"
+    },
+    "SHIBA": {
+        "name": "Shiba Inu",
+        "image": "img/crypto/shiba Inu.png"
+    },
+    "SOL": {
+        "name": "Solana",
+        "image": "img/crypto/solana.png"
     }
 }

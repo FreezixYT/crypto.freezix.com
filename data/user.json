@@ -3,28 +3,21 @@
         "nom": "Pache",
         "prenom": "Nathan",
         "email": "nathan@gmail.com",
-        "mdp": "$2y$10$aLDCJwU2o.iJvo3MKOm7VOeMjwS64PPSw0j9tsoncUGPR\/yxsQOYW",
-        "date_creation": "2024-12-06 13:13:53"
-    },
-    {
-        "nom": "rouette",
-        "prenom": "snoopy",
-        "email": "snoopy@rouette.ch",
-        "mdp": "$2y$10$dBVBkWQdY96m8jhVIkpvte3CETYRMIgBngjbB0bIaa.2wr8ERuqvy",
-        "date_creation": "2024-12-06 14:40:10"
+        "mdp": "$2y$10$5OL2lWPo2hzAza1yiUbFzeJBx1UwstBHPyMDyMAz8EAxN5qKS7g9i",
+        "date_creation": "2024-12-20 12:58:45"
     },
     {
         "nom": "Pinto",
         "prenom": "Raphael",
-        "email": "raphael@pinto.pt",
-        "mdp": "$2y$10$FtcxRRXhCLjFkA0fbRbAsOe89G\/ZlzvZcISq\/oUI2um2hBIT3Vd7W",
-        "date_creation": "2024-12-13 12:07:36"
+        "email": "raphael@gmail.com",
+        "mdp": "$2y$10$7BE8GiDRlXvcP9S6iV4fO.by9pKCT9k0FtGJukMqzCRL6U2LuXAFW",
+        "date_creation": "2024-12-20 13:01:56"
     },
     {
-        "nom": "root",
-        "prenom": "root",
-        "email": "root@admin.ch",
-        "mdp": "$2y$10$r4Nlo2x6C8UFSC5QhQgKzufIonte\/3F0fOFZNnTjOQ3p33VBJluaG",
-        "date_creation": "2024-12-13 14:34:52"
+        "nom": "tewolde",
+        "prenom": "aimun",
+        "email": "aimun@gmail.com",
+        "mdp": "$2y$10$3UtBsCvTpXba0OwmdJZ8Ser.SPHY60lOJbPbJj4wGHUL\/sJ7omsBK",
+        "date_creation": "2024-12-20 14:41:36"
     }
 ]

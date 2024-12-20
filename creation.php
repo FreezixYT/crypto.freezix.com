@@ -15,19 +15,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     $mdp2 = htmlspecialchars($_POST['mdp2']);
     $date_creation = date('Y-m-d H:i:s');
 
-    if ($mdp !== $mdp2) 
-    {
+    if ($mdp !== $mdp2) {
         echo "<p style='color: red;'>Erreur : Les mots de passe ne correspondent pas.</p>";
-    } 
-    else 
-    {
+    } else {
         $fichierJSON = './data/user.json';
-        $utilisateurs = [];
+        $fichierWallets = './data/wallet.json';
 
+        $utilisateurs = [];
         if (file_exists($fichierJSON)) {
             $contenu = file_get_contents($fichierJSON);
-            $utilisateurs = json_decode($contenu, true); 
+            $utilisateurs = json_decode($contenu, true);
+            if ($utilisateurs === null && json_last_error() !== JSON_ERROR_NONE) {
+                echo "Erreur JSON dans user.json : " . json_last_error_msg();
+                $utilisateurs = [];
+            }
         }
+
         $emailExistant = false;
         foreach ($utilisateurs as $utilisateur) {
             if ($utilisateur['email'] === $email) {
@@ -36,7 +39,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
             }
         }
 
-        if ($emailExistant) {
+        if ($emailExistant) 
+        {
             echo "<p style='color: red;'>Erreur : Cet email est déjà utilisé.</p>";
         } 
         else 
@@ -50,16 +54,44 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
                 'mdp' => $mdpHash,
                 'date_creation' => $date_creation,
             ];
-
             $utilisateurs[] = $nouvelUtilisateur;
 
-            file_put_contents($fichierJSON, json_encode($utilisateurs, JSON_PRETTY_PRINT));
+            if (file_put_contents($fichierJSON, json_encode($utilisateurs, JSON_PRETTY_PRINT)) === false) {
+                echo "<p style='color: red;'>Erreur : Impossible de sauvegarder l'utilisateur.</p>";
+                exit();
+            }
+
+            $wallets = [];
+            if (file_exists($fichierWallets)) {
+                $contenuWallets = file_get_contents($fichierWallets);
+                $wallets = json_decode($contenuWallets, true);
+                if ($wallets === null && json_last_error() !== JSON_ERROR_NONE) {
+                    echo "Erreur JSON dans wallet.json : " . json_last_error_msg();
+                    $wallets = [];
+                }
+            }
+
+            $cryptomonnaies = ['Bitcoin', 'Ethereum', 'Dogecoin', 'Freezixcoin', 'Shiba Inu', 'Solana'];
+            $walletInitial = [];
+            foreach ($cryptomonnaies as $crypto) {
+                $walletInitial[$crypto] = ($crypto === 'Freezixcoin') ? 10 : 0;
+            }
+
+            $wallets[$email] = $walletInitial;
+
+            if (file_put_contents($fichierWallets, json_encode($wallets, JSON_PRETTY_PRINT)) === false) {
+                echo "<p style='color: red;'>Erreur : Impossible de sauvegarder le portefeuille.</p>";
+                exit();
+            }
+
             header('Location: connection.php');
             exit();
         }
     }
 }
 ?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -69,12 +101,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/assets.css">
     <link rel="stylesheet" href="./css/formulair.css">
-    <title>Crée un compte | Freezix.com</title>
+    <title>Créer un compte | Freezix.com</title>
 </head>
 
 <body>
     <?php include 'assets/header.html'; ?>
-    <h1>Crée un compte</h1>
+    <h1>Créer un compte</h1>
     <form method="post" action="">
         <label>Nom</label>
         <input name="nom" type="text" required>

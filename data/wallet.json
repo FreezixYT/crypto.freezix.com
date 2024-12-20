@@ -1,6 +1,26 @@
 {
-    "root@admin.ch": {
-        "BTC": 1.5,
-        "ETH": 3
+    "nathan@gmail.com": {
+        "Bitcoin": 0.01232,
+        "Ethereum": 0,
+        "Dogecoin": 0,
+        "Freezixcoin": 10,
+        "Shiba Inu": 0,
+        "Solana": 0
+    },
+    "raphael@gmail.com": {
+        "Bitcoin": 0.001424,
+        "Ethereum": 5,
+        "Dogecoin": 6,
+        "Freezixcoin": 10,
+        "Shiba Inu": 0,
+        "Solana": 0.01
+    },
+    "aimun@gmail.com": {
+        "Bitcoin": 600000000000000,
+        "Ethereum": 0,
+        "Dogecoin": 0,
+        "Freezixcoin": 10,
+        "Shiba Inu": 0,
+        "Solana": 0
     }
 }
