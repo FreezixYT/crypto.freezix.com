@@ -1,9 +1,17 @@
+.titre
+{
+    margin-bottom: 5%;
+    font-size: 50px;
+}
 .zone-article 
 {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 20px;
+    padding: 10px;
+    align-items: center; 
+    justify-content: center; 
+    height: 100vh; 
 }
 
 .article 
@@ -16,7 +24,9 @@
     transition: 0.3s ease;
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 50%; 
+    max-width: 800px; 
+    margin-bottom: 20px; 
 }
 
 .article h2 
@@ -67,7 +77,6 @@
     border-radius: 50px;
     transition: background-color 0.3s;
     text-align: center;
-    margin-bottom: 100px;
 }
 
 .more:hover 
@@ -79,6 +88,7 @@
 {
     .article {
         padding: 15px;
+        width: 90%; 
     }
     
     .more {

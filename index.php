@@ -12,7 +12,7 @@
     <?php include "./assets/header.html"; ?>
     <main>
         <h1>Bienvenue sur freezix.com</h1>
-        <a class="start" href="./achat">Acheter des crypto</a>
+        <a class="start" href="./market.php">Acheter des crypto</a>
         <p>Freezix.com, regarder, acheter et vendez vos crypto au meuilleur prix</p>
     </main>
     <?php include "./assets/footer.html" ?>

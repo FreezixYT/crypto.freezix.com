@@ -1,26 +1,18 @@
 {
-    "nathan@gmail.com": {
-        "Bitcoin": 0.01232,
-        "Ethereum": 0,
-        "Dogecoin": 0,
-        "Freezixcoin": 10,
-        "Shiba Inu": 0,
-        "Solana": 0
+    "nathan@eduge.ch": {
+        "Bitcoin": 2,
+        "Ethereum": 0.3,
+        "Dogecoin": 504,
+        "Freezixcoin": 100,
+        "Shiba Inu": 30,
+        "Solana": 10.4
     },
-    "raphael@gmail.com": {
-        "Bitcoin": 0.001424,
-        "Ethereum": 5,
-        "Dogecoin": 6,
+    "nathan@freezix.com": {
+        "Bitcoin": 0.1,
+        "Ethereum": 2.1,
+        "Dogecoin": 2983.1,
         "Freezixcoin": 10,
-        "Shiba Inu": 0,
-        "Solana": 0.01
-    },
-    "aimun@gmail.com": {
-        "Bitcoin": 600000000000000,
-        "Ethereum": 0,
-        "Dogecoin": 0,
-        "Freezixcoin": 10,
-        "Shiba Inu": 0,
-        "Solana": 0
+        "Shiba Inu": 0.1,
+        "Solana": 0.1
     }
 }

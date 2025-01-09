@@ -24,9 +24,11 @@ if ($actu === null) {
     <?php include "./assets/header.html"; ?>
 
     <main>
-        <h1>Actualité</h1>
+        <h2 class="titre">Actualité  <a href="./creeArticle.php" class="more">+</a></h2>
+       
         <div class="zone-article">
             <?php
+            //si il y as des article, les lister
             if (!empty($actu)) {
                 foreach ($actu as $article) {
                     echo "<div class='article'>";
@@ -46,7 +48,6 @@ if ($actu === null) {
 
 
         </div>
-        <a href="./creeArticle.php" class="more">+</a>
     </main>
 
     <?php include "./assets/footer.html"; ?>

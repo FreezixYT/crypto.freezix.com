@@ -2,22 +2,15 @@
     {
         "nom": "Pache",
         "prenom": "Nathan",
-        "email": "nathan@gmail.com",
-        "mdp": "$2y$10$5OL2lWPo2hzAza1yiUbFzeJBx1UwstBHPyMDyMAz8EAxN5qKS7g9i",
-        "date_creation": "2024-12-20 12:58:45"
+        "email": "nathan@eduge.ch",
+        "mdp": "$2y$10$MfCRVw21Xr9bVOVhAkQzlOsDFhgtACScYM6xwpGDsTRj46zHgdMtO",
+        "date_creation": "2025-01-09 20:31:32"
     },
     {
-        "nom": "Pinto",
-        "prenom": "Raphael",
-        "email": "raphael@gmail.com",
-        "mdp": "$2y$10$7BE8GiDRlXvcP9S6iV4fO.by9pKCT9k0FtGJukMqzCRL6U2LuXAFW",
-        "date_creation": "2024-12-20 13:01:56"
-    },
-    {
-        "nom": "tewolde",
-        "prenom": "aimun",
-        "email": "aimun@gmail.com",
-        "mdp": "$2y$10$3UtBsCvTpXba0OwmdJZ8Ser.SPHY60lOJbPbJj4wGHUL\/sJ7omsBK",
-        "date_creation": "2024-12-20 14:41:36"
+        "nom": "cordon bleu",
+        "prenom": "freezix",
+        "email": "nathan@freezix.com",
+        "mdp": "$2y$10$fNohdlCdbdj06eb4hdJTqOJYxVjuhTKPNsSlqyrh3smeXQhlWCQEu",
+        "date_creation": "2025-01-09 20:34:23"
     }
 ]

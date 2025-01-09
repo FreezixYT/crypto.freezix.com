@@ -8,7 +8,8 @@ header
     margin-bottom: 100px;
 }
 
-div {
+ header div 
+{
     display: flex;
     align-items: center; 
 }
@@ -41,7 +42,7 @@ footer {
     padding: 10px;
     width: 100%;
     bottom: 0;
-    position: absolute;
+    position: relative;
 }
 
 .compte {

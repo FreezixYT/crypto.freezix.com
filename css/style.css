@@ -49,6 +49,7 @@ main>p {
     padding-bottom: 10px;
 }
 
-.user-info li:last-child {
+.user-info li:last-child 
+{
     border-bottom: none; 
 }
